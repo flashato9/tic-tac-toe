@@ -1,6 +1,8 @@
 # TicTacToe
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.3.
+This is a **beautiful project** built with Angular. The following picutre tells you what it looks like. **Dowload to play it.**
+
+
 
 ## Development server
 
