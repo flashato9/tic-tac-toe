@@ -2,7 +2,11 @@
 
 This is a **beautiful project** built with Angular. The following picutre tells you what it looks like. **Dowload to play it.**
 
+## Winner, Winner Gagnant
+![](gith_images/winner_screen.png)
 
+## Intense Game
+![](gith_images/default_screen.png)
 
 ## Development server
 
