@@ -4,6 +4,7 @@ html, body { height: 100%; }
 body{
     box-sizing: border-box; //keeps the size of the body the same when the padding is added
     padding-top: 1px;
+    background-image: url(assets/body_imgs/body_back.jpg);
 }
 body { 
     margin: 0; 

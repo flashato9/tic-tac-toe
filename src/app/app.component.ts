@@ -32,6 +32,7 @@ export class AppComponent implements OnInit{
     if(!this.squares[idx] && !this.winner){
       
       this.squares[idx]=this.currentPlayer;
+      //this.squares.splice(idx,1,this.currentPlayer);
       
       this.winner=this.calculateWinner(this.squares)
       this.currentPlayer == "X" ? this._currentPlayer="O": this._currentPlayer="X"
