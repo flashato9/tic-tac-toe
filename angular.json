@@ -31,6 +31,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -94,7 +95,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
+              "src/styles.scss",
+              "node_modules/@nebular/theme/styles/prebuilt/cosmic.css"
             ],
             "scripts": []
           }
@@ -127,5 +130,8 @@
       }
     }
   },
-  "defaultProject": "tic-tac-toe"
+  "defaultProject": "tic-tac-toe",
+  "cli": {
+    "analytics": "a2c45ac0-c2b8-4fb8-a79a-cbf564856fa0"
+  }
 }
