@@ -9,4 +9,21 @@ body{
 body { 
     margin: 0; 
     font-family: Roboto, "Helvetica Neue", sans-serif; 
+
+    app-root{
+        display: block;
+        width: 42rem;
+        margin: 1rem auto;
+    }
 }
+
+html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+    }
