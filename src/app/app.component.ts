@@ -7,9 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit{
-  squares: ("X"|"O"|null)[];
+  squares: Square[];
   private _currentPlayer: "X"|"O";
-  public winner: "X"|"O"|null;
+  public winner:  "X"|"O"|null;
   ngOnInit(){
     this.resetGame();
     
@@ -21,7 +21,7 @@ export class AppComponent implements OnInit{
   }
 
   resetGame(){
-    this.squares= new Array(9).fill(null);
+    this.squares= new Array(9).fill(null).map( (value) => {return new Square(null);});
     this._currentPlayer= "X";
     this.winner=null;
     console.log("Squares have been initialized");
@@ -29,12 +29,12 @@ export class AppComponent implements OnInit{
   }
 
   updateBoard(idx:number){
-    if(!this.squares[idx] && !this.winner){
+    if(!this.squares[idx].value && !this.winner){
       
-      this.squares[idx]=this.currentPlayer;
+      this.squares[idx].value=this.currentPlayer;
       //this.squares.splice(idx,1,this.currentPlayer);
       
-      this.winner=this.calculateWinner(this.squares)
+      this.winner=this.calculateWinner(this.squares.map((square) => {return square.value}))
       this.currentPlayer == "X" ? this._currentPlayer="O": this._currentPlayer="X"
     }
     
@@ -66,6 +66,24 @@ private calculateWinner(squares: ("X"|"O"|null)[]): ("X"|"O"|null){
     this.squares=[]
    this._currentPlayer= "X";
     this.winner = null;
+  }
+
+}
+
+
+class Square{
+  private _value: "X" | "O" | null;
+
+  constructor(value: "X" | "O" | null) {
+    this._value = value;
+  }
+
+  get value(){
+    return this._value;
+  }
+
+  set value(value:"X" | "O" | null){
+    this._value=value;
   }
 
 }

@@ -12,7 +12,7 @@
   <main id="grid">
     <mat-grid-list cols="3" gutterSize="0.5rem" >
       <mat-grid-tile  *ngFor="let square of squares; let idx = index;"  >
-        <square [value]="square" (click)="updateBoard(idx)"> </square>
+        <square [value]="square.value" (click)="updateBoard(idx)"> </square>
       </mat-grid-tile>
 
     </mat-grid-list>
